@@ -1,0 +1,12 @@
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| product_id  | int     |
+| low_fats    | enum    |
+| recyclable  | enum    |
++-------------+---------+
+
+Very easy problem.
+
+You only want the product_id so you select that from the Products table.
+Then, use a where low_fats and recyclable both equal 'Y'.
