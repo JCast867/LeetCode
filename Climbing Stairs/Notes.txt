@@ -1,0 +1,57 @@
+NOTES
+
+if n = 3
+
+            0
+        1       2
+      2   3   3   4
+    3   4
+
+We can see using a decision tree, the time complexity would be 2^n which isn't good.
+However, we can only see in the decision tree tht there are values being repeated. 
+If this decision tree was bigger, there would be more values being repeated.
+
+Something we can do to take advantage of this is to remember.
+When you get to the '2' node, you're left with these children values:
+        2
+      3   4
+
+This '2' node is seen again and we can trim the other branch. So you'll end up with:
+            0
+        1       2
+      2   3   X   X
+    3   4
+
+For larger steps, we would repeat this process with 3, 4, 5, and so on.
+This would help improve the time complexity to O(n) since we're only solving each problem once.
+
+This problem can also be solved using a dynamic programming bottom up technique.
+
+Let's say n = 5.
+
+We can have an array, dp, to hold the values of each step:
+
+    0           1           2           3           4           5
+|----------------------------------------------------------------------|
+|   8    |     5     |     3     |     2     |     1     |      1      |
+|        |           |           |           |           |             |
+|        |           |           |           |           |             |
+|----------------------------------------------------------------------|
+
+The last value, in this case 5, and the second to last value, in this case 4, will always be 1.
+Regardless of how big the steps are, the last and second to last values will always be 1.
+
+To get the number of steps for step 3, you add the 2 next steps on its right.
+So in this case it'll be steps 4 and 5, 1 + 1, which will result to 2.
+
+Then, you repeat this process with step 2. You add the 2 next steps on its right.
+So, step 3 and 4, 2 + 1, which will be 3.
+
+Then again for step 1.
+Step 2 and 3, 3 + 2 = 5.
+
+Then again for step 0.
+Step 1 and 2, 5 + 3 = 8.
+
+However, instead of using an array and wasting more memory, we can use 2 variables instead.
+These two variables will be at the last and second to last steps and after we compute them, we can shift them over.
