@@ -1,0 +1,1 @@
+Using a left inner join will select all of the values in the Customers table. Hoewever, just using the inner join will select every name which is not what we want. So using the where clause that checks where customerId is null in the Order table will fix this issue.
