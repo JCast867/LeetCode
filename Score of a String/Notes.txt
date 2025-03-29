@@ -1,0 +1,3 @@
+total will keep track of the score. then using a for loop till the second to last element (doing this to avoid
+out of range errors), you can add the absolute value of the current value (i), minues the value next it (i + 1)
+to the total. then return the total
