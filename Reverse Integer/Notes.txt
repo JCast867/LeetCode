@@ -1,0 +1,3 @@
+Using a for loop will do the trick here. Using the range for loop, you can start at the last element of the number given (which was turned
+into a string to allow looping over each number), then go back by using -1 and stoping at -1 uf there's no negative sign (-) in the
+beginning. If there is, then stop at 0 to avoid that sign.
