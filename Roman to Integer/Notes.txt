@@ -1,0 +1,7 @@
+Going to have to make a variable to keep track of the total.
+
+Then you can loop through each letter. Using a while loop was much simpler to implement.
+So while i < the length of the string (s), you look for each value and see if they match with a certain letter.
+So M for 1000, D for 500, etc, etc. However, some values like I, X, and C can be put in front of other letters and not add to the total value.
+Instead, it'd subtract. So we have to check if there's some values in front of these to see if it'll change the meaning of the total.
+Then, return the total.
