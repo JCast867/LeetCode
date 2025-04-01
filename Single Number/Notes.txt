@@ -1,0 +1,4 @@
+Initializing an empty dictionary and an ans value to keep track of the counts of the numbers and the correct answer.
+So with looping through to get the counts of the numbers, just check if it's in the dictionary. If not, add 1.
+Then another for loop to to see which number has the the value 1. And if it does, then the key is the answer.
+Then return the answer.
