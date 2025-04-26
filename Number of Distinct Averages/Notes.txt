@@ -1,0 +1,5 @@
+Having a dictionary is useful here because it'll help us check if the key (average) is inside the dictionary or not.
+Since we have to remove the max and min each time, a while loop would fit this situation better.
+We can check while the list is not empty, find the min and max, get the average, and add the average to the distionary if it doesnt exist already.
+Then we can remove the min and max and after the while loop is over, return the length of the distionary since that'll be how much
+distinct averages we have in total.
